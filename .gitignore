@@ -1,0 +1,87 @@
+# Python and Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.bak
+
+# Virtual Environment
+venv/
+env/
+env_bak/
+
+# IDE and Editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.suo
+*.user
+*.sln.docstates
+
+# Compiled Python Files
+*.pyc
+__pycache__/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Python Installer
+*.msi
+*.msm
+*.msp
+
+# VSCode workspace settings
+.vscode/settings.json
+
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+
+# Ignore .vim and .secret files
+*.vim
+*.secret
+
+# Log files
+log/
+logs/
+
+# Ignore generated media files
+media/
+
+# Ignore environment variables
+.env
+.env.*
+
