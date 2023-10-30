@@ -27,6 +27,8 @@ class PropertyFactory(factory.django.DjangoModelFactory):
 
     name = "p1" 
     description = "d1" 
-    product_type = factory.SubFactory(PropertyTypeFactory)  # Use PropertyTypeFactory here
+    property_type = factory.SubFactory(PropertyTypeFactory)  # Use PropertyTypeFactory here
     category = factory.SubFactory(CategoryFactory)
+    price = factory.Faker("pydecimal", left_digits=2, right_digits=2, positive=True)
+    pid = factory.Sequence(lambda n: "test_pid_%d" % n)
 

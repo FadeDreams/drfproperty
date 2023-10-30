@@ -6,8 +6,8 @@ class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = '__all__'
-        # fields = ["category", "slug"]
+        # fields = '__all__'
+        fields = ["category", "slug"]
 
 
 class PropertyTypeSerializer(serializers.ModelSerializer):
@@ -16,10 +16,28 @@ class PropertyTypeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class PropertySerializer(serializers.ModelSerializer):
-    product_type = PropertyTypeSerializer()
+    property_type = PropertyTypeSerializer()
     category = CategorySerializer()
     class Meta:
         model = Property
         fields = '__all__'
 
+class PropertyCategorySerializer(serializers.ModelSerializer):
+    category = CategorySerializer()
 
+    class Meta:
+        model = Property
+        fields = (
+            "name",
+            "slug",
+            "price",
+            "description",
+            "category",
+            "product_type",
+            "is_active",
+        )
+
+class PropertyImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PropertyImage
+        exclude = ("id", "property")

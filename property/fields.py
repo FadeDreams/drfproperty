@@ -44,7 +44,7 @@ class OrderField(models.PositiveIntegerField):
                 }
                 qs = qs.filter(**query)
                 last_item = qs.latest(self.attname)
-                value = last_item.order + 1
+                value = last_item.order + 1 #first item in the category
             except ObjectDoesNotExist:
                 value = 1
             return value
